@@ -13,15 +13,15 @@ You will need to install docker and docker-compose (optional). Instructions can 
 ### Install and usage
 Clone this repository into your current directory by typing the following into a terminal:
 
-git clone https://github.com/jjiaoyuwang/coote-comp-env-setup.git
+    git clone https://github.com/jjiaoyuwang/milling-control.git
 
 Next, build the docker image by typing the following:
 
-docker build -t mill-control  .
+    docker build -t mill-control  .
 
 Plug in your arduino device with GRBL shield, and note its address (usually /dev/ttyACM0). Finally, run the container, replacing 8090 with the desired port and /dev/ttyACM0 with your board's address.  
 
-docker run -it --rm -p 8090:8080 --device=/dev/ttyACM0 mill-control
+    docker run -it --rm -p 8090:8080 --device=/dev/ttyACM0 mill-control
 
 ### Explanations and notes to self:
 
@@ -29,9 +29,9 @@ docker run -it --rm -p 8090:8080 --device=/dev/ttyACM0 mill-control
 - Install GRBL (go to github page or <https://www.instructables.com/How-to-Installuse-GRBL-With-Your-Cnc-Machine/>
 - Calculate steps/mm (<https://blog.prusaprinters.org/calculator_3416/>). Send the following commands to set the steps to 400:
     
-    $100 = 400
-    $101 = 400
-    $102 = 400
+        $100 = 400
+        $101 = 400
+        $102 = 400
 
 ### Other useful links:
 - cncjs github repo: <https://github.com/cncjs/cncjs>
