@@ -1,0 +1,29 @@
+{
+  "watchDirectory": "/path/to/dir",
+  "accessTokenLifetime": "30d",
+  "allowRemoteAccess": false,
+  "state": {
+    "checkForUpdates": true
+  },
+  "commands": [
+    {
+      "title": "Update (root user)",
+      "commands": "sudo npm install -g cncjs@latest --unsafe-perm; pkill -a -f cnc"
+    },
+    {
+      "title": "Update (non-root user)",
+      "commands": "npm install -g cncjs@latest; pkill -a -f cnc"
+    },
+    {
+      "title": "Reboot",
+      "commands": "sudo /sbin/reboot"
+    },
+    {
+      "title": "Shutdown",
+      "commands": "sudo /sbin/shutdown"
+    }
+  ],
+  "events": [],
+  "macros": [],
+  "users": []
+}
